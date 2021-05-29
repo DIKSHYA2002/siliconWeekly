@@ -1,11 +1,18 @@
-// HERO
-
-var nav = document.querySelector('nav');
-
-window.addEventListener('scroll', function() {
-    if (window.pageYOffset > 100) {
-        nav.classList.add('bg-dark', 'shadow');
-    } else {
-        nav.classList.remove('bg-dark', 'shadow');
+function myFunction() {
+    // Declare variables
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("mySearch");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myMenu");
+    li = ul.getElementsByTagName("li");
+  
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName("a")[0];
+      if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
     }
-});
+  }
