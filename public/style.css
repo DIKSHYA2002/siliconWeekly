@@ -1,17 +1,19 @@
+/*Nav-Bar*/
 body {
   margin:0;
   padding:0;
   background:#28282B;
+
   }
   
   .search-box {
     position: absolute;
-    top:3em;
-    left: 9em;
-    transform:translate(-50%,-50%);
+    top:4em;
+    left: 1em;
+    transform:translate(0,-100%);
     background: white;
-    height:40px;
-    border-radius: 40px;
+    height:20px;
+    border-radius: 50px;
     padding: 10px;
    
   }
@@ -24,8 +26,8 @@ body {
   .search-btn {
     color: black;
     float: right;
-    width:40px;
-    height:40px;
+    width:20px;
+    height:20px;
     border-radius:50%;
     background: white;
     display:flex;
@@ -38,9 +40,35 @@ body {
     outline: none;
     float:left;
     padding:0;
-    coloir:white;
+    color:black;
     font-size:16px;
     transition:0.4s;
-    line-height:40px;
+    line-height:20px;
     width:0px;
+  }
+
+ 
+  .nav a {
+    float:right;
+    color:white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: lato;
+  
+  }
+  .nav a.active {
+    background-color: #28282B;e;
+    color:white;
+  }
+  .nav a:hover {
+    background-color:whitesmoke ;
+    color:black;
+
+  }
+  .nav {
+     padding-top: 1em; 
+     \\display: ;
+     
   }
