@@ -1,92 +1,165 @@
-/*Nav-Bar*/
-body {
-  margin:0;
-  padding:0;
-  background:
 
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+
+}
+body{
+  font-family: montrserrat;
+}
+nav{
+  height: 80px;
+  width: 100%;
+  background: #28282B;
+
+}
+ nav ul{
+   float: right;
+   margin-right: 40px;
+
+ }
+
+ nav li{
+   display: inline-block;
+   margin:0 8px;
+   line-height: 80px; 
+ }
+
+ nav a{
+   color: white;
+   font-size:18px;
+   letter-spacing: 3px;
+   text-transform: uppercase;
+   border: 1px  transparent;
+   padding: 8px;
+   border-right: 10px;
+ }
+
+ a.active,a:hover{
+   border: 1px solid white;
+   transition: .5s;
   }
-  
-  .search-box {
-    position: absolute;
-    top:4em;
-    left: 1em;
-    transform:translate(0,-100%);
-    background: white;
-    height:20px;
-    border-radius: 50px;
-    padding: 10px;
-   
-  }
-  
-  .search-box:hover>.search-txt{
-    width:240px;
-  }
-  
-  
-  .search-btn {
-    color: black;
+
+  nav #icon {
+    color: white;
+    font-size: 30px;
+    line-height: 80px;
     float: right;
-    width:20px;
-    height:20px;
-    border-radius:50%;
-    background: white;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .search-txt {
-    border:none;
-    background:none;
-    outline: none;
-    float:left;
-    padding:0;
-    color:black;
-    font-size:16px;
-    transition:0.4s;
-    line-height:20px;
-    width:0px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
   }
 
-  .nav a {
-    float:right;
-    color:white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    font-family: lato;
-  
-  }
-  .nav a.active {
-    background-color: white;
-    color:black;
-  }
-  .nav a:hover {
-    background-color:whitesmoke ;
-    color:black;
+  .hero {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    width: 60%;
+    height: 25em;
+}
 
 
+  @media (max-width:1048px)
+  {  
+
+      \\add button;
+
+      nav ul{
+        margin-right: 20px;
+
+      }
+      nav a{
+        font-size:17px;
+      }
+
+     
   }
-  .nav-top {
-     padding-top: 1em; 
-     letter-spacing: 3px;
-     background-color: #28282B;
-     height: 4em;
+@media (max-width:1073px)
+{
+  nav #icon{
+    display: block;
+
   }
   .hero {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
     width: 100%;
-    height: 645px;
-    opacity: 0.77;
-    position: relative;
+    height: 13em;
+}
+  nav ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    top:80px;
+    left:-100%;
+    text-align: center;
+   transition: all .5s;
   }
-  
-  .logo {
-    height: 60em;
-    position:absolute ;
-    left: 19em;
-    top:-6em;
-
-
-    
+  nav li{
+    display: block;
+    margin:50px 0;
+    line-height: 15px;
+   
 
   }
+nav a{
+  font-size:15px;
+}
+
+a.active,a:hover{
+  border:none;
+  color: blueviolet;
+
+}
+nav ul.show{
+  left:0;
+}
+
+}
+
+.search-box {
+  position: absolute;
+  top:4em;
+  left: 1em;
+  transform:translate(0,-100%);
+  background: white;
+  height:20px;
+  border-radius: 50px;
+  padding: 10px;
+ 
+}
+
+.search-box:hover>.search-txt{
+  width:240px;
+}
+
+
+.search-btn {
+  color:black;
+  float: right;
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  background:white;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-txt {
+  border:none;
+  background:none;
+  outline: none;
+  float:left;
+  padding:0;
+  color:black;
+  font-size:16px;
+  transition:0.4s;
+  line-height:20px;
+  width:0px;
+}
